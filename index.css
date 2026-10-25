@@ -1,0 +1,107 @@
+:root {
+    --bg: #fff;
+    --detail: #c0436b;
+    --base-font-size: 14px;
+    --gdpr-foot-font-size: 10px;
+    --line-size: 2px;
+    --global-gap: 2mm;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--base-font-size);
+}
+
+.a4, .left, .right { 
+    padding: var(--global-gap); 
+} 
+
+.a4 {
+    position: relative;
+    width: 210mm; 
+    height: 297mm; 
+    display: grid; 
+    grid-template-columns: 1fr 2fr;
+    background-color: var(--bg);
+}
+
+.footer {
+    border-top: var(--detail) solid var(--line-size); 
+    margin: calc(var(--global-gap) * 2);
+    margin-bottom: 0;
+    font-size: var(--gdpr-foot-font-size);
+    position: absolute;
+    bottom: 0;
+}
+
+.position {
+    padding-bottom: 0.3rem;
+}
+
+.position > :last-child {
+    padding-bottom: 0.3rem;
+}
+
+.position-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.description {
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem; 
+    margin-left: 1rem;
+}
+
+.italic {font-style: italic;}
+.bold {font-weight: bold;}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.contact-item svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #000;
+}
+
+h1 {font-size: 3rem;}
+h2 {font-size: 1.5rem;}
+h3 {
+    border-bottom: solid var(--line-size) var(--detail);
+    margin-bottom: 0.5rem;
+    padding-top: 0.8rem;
+    font-size: 1.3rem;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ul.no-type-list {
+    list-style-type: none;
+}
+
+li:not(:last-child) {
+    padding-bottom: 0.2rem;
+}
+
+img {
+    width: 95%; 
+    display: block; 
+    margin: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
